@@ -1,0 +1,49 @@
+# First, let's create a Product.js file with the following code:
+
+import React from 'react';
+
+const Product = (props) => {
+  return (
+    <div>
+      <h2>{props.title}</h2>
+      <p>Price: {props.price}</p>
+      <p>Description: {props.description}</p>
+    </div>
+  );
+};
+
+export default Product;
+
+# This is a simple functional component that takes in three props: title, price, and description. It outputs these props in an HTML structure.
+# Now let's move on to the App.js file. Here's an example code to output two Product items using the <Product /> component:
+
+import React from 'react';
+import Product from './Product';
+
+const App = () => {
+  return (
+    <div>
+      <h1>My Demo Shop</h1>
+      <Product
+        title="Product 1"
+        price="10"
+        description="First product"
+      />
+      <Product
+        title="Product 2"
+        price="20"
+        description="Second product"
+      />
+    </div>
+  );
+};
+
+export default App;
+
+
+# In this code, we import the <Product /> component from the Product.js file. Then we use it twice, passing different props for each instance.
+# The first <Product /> component outputs data for the first product, with the title "Product 1", price "10", and description "First product".
+# The second <Product /> component outputs data for the second product, with the title "Product 2", price "20", and description "Second product".
+# And that's it! This code should output two Product items with different data.
+
+
